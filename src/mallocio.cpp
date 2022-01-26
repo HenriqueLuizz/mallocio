@@ -19,8 +19,9 @@ int main()
 	printf(" | |\\/| | / _ \\ | |   | |  | | | | |   _____| | | | |\n");
 	printf(" | |  | |/ ___ \\| |___| |__| |_| | |__|_____| | |_| |\n");
 	printf(" |_|  |_/_/   \\_\\_____|_____\\___/ \\____|   |___\\___/ \n");
-	printf("                                               v1.2.3  xVs\n");
+	printf("                                               xVs xArc\n");
 	printf("                                                   \n");
+	printf(" \n");
 	
 	printf("TESTE 1\n");
 	printf("ALOCANDO BLOCO DE MEMORIA\n");
@@ -39,19 +40,21 @@ int main()
 	seconds = timer2 - timer;
 
 	printf("TEMPO LEVADO PARA ALOCAR MEMORIA: %f segundos\n", seconds);
-	if (seconds <= 20) {
-		printf("RESULTADO DO TESTE: Otimo \n");
+	printf(" \n");
+	if (seconds <= 10) {
+		printf("RESULTADO DO TESTE: Otimo -> RECOMENDADO PARA O PROTHEUS\n");
 	}
-	else if (seconds > 20 && seconds <= 24) {
-		printf("RESULTADO DO TESTE: Bom\n");
+	else if (seconds > 10 && seconds <= 15) {
+		printf("RESULTADO DO TESTE: Bom -> NAO recomendado para o Protheus\n");
 	}
-	else if (seconds > 24 && seconds <= 29) {
-		printf("RESULTADO DO TESTE: Ruim\n");
+	else if (seconds > 15 && seconds <= 25) {
+		printf("RESULTADO DO TESTE: Ruim -> NAO recomendado para o Protheus\n");
 	}
 	else {
-		printf("RESULTADO DO TESTE: Pessimo\n");
+		printf("RESULTADO DO TESTE: Pessimo -> NAO recomendado para o Protheus\n");
 	}
 
+	printf(" \n");
 	printf(" \n");
 	printf("TESTE 2\n");
 	printf("LEITURA EM DISCO\n");
@@ -76,33 +79,37 @@ int main()
 	seconds = timer2 - timer;
 
 	printf("TEMPO LEVADO PARA REALIZAR A LEITURA EM DISCO: %f segundos\n", seconds);
+	printf(" \n");
 	if (seconds <= 10) {
-		printf("RESULTADO DO TESTE: Otimo\n");
+		printf("RESULTADO DO TESTE: Otimo -> RECOMENDADO PARA O PROTHEUS\n");
 	}
 	else if (seconds > 10 && seconds <= 25) {
-		printf("RESULTADO DO TESTE: Bom\n");
+		printf("RESULTADO DO TESTE: Bom -> NAO recomendado para o Protheus\n");
 	}
 	else if (seconds > 25 && seconds <= 26) {
-		printf("RESULTADO DO TESTE: Ruim\n");
+		printf("RESULTADO DO TESTE: Ruim -> NAO recomendado para o Protheus\n");
 	}
 	else {
-		printf("RESULTADO DO TESTE: Pessimo\n");
+		printf("RESULTADO DO TESTE: Pessimo -> NAO recomendado para o Protheus\n");
 	}
 
 	printf(" \n");
+	printf(" \n");
+	printf(" ***********************************************************************\n");
+	printf(" \n");
 	printf(" TABELA DE REFERENCIA - ALOCAR BLOCO DE MEMORIA\n");
 	printf(" \n");
-	printf("Otimo   - ate 20.000000 segundos \n");
-	printf("Bom     - ate 24.000000 segundos \n");
-	printf("Ruim    - ate 29.000000 segundos \n");
-	printf("Pessimo - + 30.000000 segundos \n");
+	printf("Otimo   - ate 10.000000 segundos (RECOMENDADO PARA O PROTHEUS)\n");
+	printf("Bom     - ate 15.000000 segundos (NAO recomendado para o Protheus)\n");
+	printf("Ruim    - ate 25.000000 segundos (NAO recomendado para o Protheus)\n");
+	printf("Pessimo -   + 25.000000 segundos (NAO recomendado para o Protheus)\n");
 	printf(" \n");
 
 	printf(" TABELA DE REFERENCIA - LEITURA EM DISCO\n");
 	printf(" \n");
-	printf("Otimo   - ate 10.000000 segundos \n");
-	printf("Bom     - ate 25.000000 segundos \n");
-	printf("Ruim    - ate 26.000000 segundos \n");
-	printf("Pessimo - + 40.000000 segundos \n");
+	printf("Otimo   - ate 10.000000 segundos (RECOMENDADO PARA O PROTHEUS)\n");
+	printf("Bom     - ate 25.000000 segundos (NAO recomendado para o Protheus)\n");
+	printf("Ruim    - ate 26.000000 segundos (NAO recomendado para o Protheus)\n");
+	printf("Pessimo -   + 26.000000 segundos (NAO recomendado para o Protheus)\n");
 	printf(" \n");
 }
