@@ -38,8 +38,6 @@ Aplicação em C++ que realiza o teste de alocação de bloco de memória e leit
 
 - O executavel estará no diretório ./build.
 
-> x86_64-w64-mingw32-g++ mallocio.cpp -o mallocio-win-lnx -static-libgcc -static-libstdc++
-
 ## Docker
 
 - Build dockerfile;
