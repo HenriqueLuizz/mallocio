@@ -4,19 +4,12 @@ ENV DIST=both
 
 WORKDIR /project
 
-# Install packages
-# RUN apt-get update -y && apt-get install -y \
-#     make \
-#     g++ \
-#     g++-mingw-w64 \
-#     zip \
-#     unzip \
-#     tar 
 RUN apk add --no-cache mingw-w64-gcc \
     make \
     g++ \
     zip \
-    tar
+    tar \
+    samba-client
 
 # Copy files
 COPY . /project

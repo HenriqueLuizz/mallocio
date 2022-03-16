@@ -18,7 +18,7 @@ windows:
 	sed -i 's/xVs/$(VERSION)/g' $(PATH_SOURCE)$(PROGRAM)-windows-$(ARC).$(TYPE)
 	sed -i 's/xArc/$(ARC)/g' $(PATH_SOURCE)$(PROGRAM)-windows-$(ARC).$(TYPE)
 	mkdir -p $(PATH_BUILD)
-	x86_64-w64-mingw32-g++ -pedantic -std=c++11 -o $(PATH_BUILD)$(PROGRAM)-windows-$(VERSION)-$(ARC).exe $(PATH_SOURCE)$(PROGRAM)-windows-$(ARC).$(TYPE) -static-libgcc -static-libstdc++
+	x86_64-w64-mingw32-g++ -pedantic -std=c++11 -o $(PATH_BUILD)$(PROGRAM)-windows-$(VERSION)-$(ARC).exe $(PATH_SOURCE)$(PROGRAM)-windows-$(ARC).$(TYPE) -static-libgcc -static-libstdc++ -Wl,-Bstatic -lstdc++ -lpthread -Wl,-Bdynamic
 	zip $(PATH_BUILD)$(PROGRAM)-windows-$(VERSION)-$(ARC).zip $(PATH_BUILD)$(PROGRAM)-windows-$(VERSION)-$(ARC).exe $(PATH_BUILD)teste.txt
 	rm -f $(PATH_SOURCE)$(PROGRAM)-windows-$(ARC).$(TYPE)
 
@@ -35,3 +35,9 @@ linux:
 
 .PHONY: both
 both: windows linux
+
+
+.PHONY: deploy
+deploy:
+	@ echo 'Deploying binary to ARTE'
+	./deploy.sh

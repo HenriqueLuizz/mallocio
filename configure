@@ -1,4 +1,3 @@
-#!/bin/bash
+#!/bin/sh
 
-apt-get update -y
-apt-get install make g++ g++-mingw-w64 mingw-w64 zip -y
+apk add --no-cache mingw-w64-gcc make g++ zip tar samba-client
